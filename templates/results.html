@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Results</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Results</h1>
+        </div>
+        <div class="box">
+            <h2>Evaluation Results</h2>
+            <ul class="results">
+                <li>Rule 1: TOTAL_REVENUE_5CR_FLAG - {{ results.flags.TOTAL_REVENUE_5CR_FLAG }}</li>
+                <li>Rule 2: BORROWING_TO_REVENUE_FLAG - {{ results.flags.BORROWING_TO_REVENUE_FLAG }}</li>
+                <li>Rule 3: ISCR_FLAG - {{ results.flags.ISCR_FLAG }}</li>
+            </ul>
+            <a href="/">Upload another file</a>
+        </div>
+    </div>
+</body>
+</html>
